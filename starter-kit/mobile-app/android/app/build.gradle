@@ -130,12 +130,12 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.solutionstarterkitcooperation2020app"
+        applicationId "com.collabiz"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
-        resValue "string", "build_config_package", "com.solutionstarterkitcooperation2020app"
+        resValue "string", "build_config_package", "com.collabiz"
     }
     splits {
         abi {
