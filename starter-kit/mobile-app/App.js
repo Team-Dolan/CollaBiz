@@ -9,7 +9,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import LoadingScreen from './src/screens/loading';
 import Home from './src/screens/home';
-import ChatBot from './src/screens/bot';
+import Chat from './src/screens/bot';
 import UserChat from './src/screens/user-chat';
 import SearchResources from './src/screens/resources-search';
 import AddResource from './src/screens/resource-add';
@@ -26,7 +26,7 @@ const ResourcesStackOptions = ({ navigation }) => {
   return ({
     headerRight: () => (
       <Button
-        onPress={() => navigation.navigate('ChatBot')}
+        onPress={() => navigation.navigate('Chat')}
         title='Chat with Watson'
       />
     )
@@ -82,7 +82,7 @@ const TabLayout = () => (
     />
     <Tab.Screen
       name='Chat'
-      component={Chat}
+      component={UserChat}
       options={{
         tabBarIcon: ({color}) => (<ChatIcon fill={color} />)
       }}
