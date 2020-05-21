@@ -1,4 +1,4 @@
-# Community collaboration in the context of COVID-19
+# Business collaboration in the context of COVID-19 and future networking use
 
 This solution starter was created by technologists from IBM.
 
@@ -13,6 +13,12 @@ This solution starter was created by technologists from IBM.
 - Robert Loredo
 - Debbie Kestin Schildkraut
 - Bruce Weed
+
+## Team-Dolan
+
+- Rohan Taneja
+- Ujjuwal Agarawal
+- Aaryaman Saini
 
 ## Contents
 
@@ -58,6 +64,9 @@ A Recipient, who is in need of food, supplies, resources, or other essentials, o
 ## Diagrams
 
 ![Cooperation architecture diagram](/images/architecture-diagram.png)
+
+
+![Flow-chart diagram](/images/flow-chart.png)
 
 This solution starter idea combines a chat interface (Watson Assistant), data storage to hold the status of supplies available, and location services with real-time information to get users the information they need.
 
