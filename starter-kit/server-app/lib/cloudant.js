@@ -74,8 +74,9 @@ const dbCloudantConnect = () => {
  * Find all resources that match the specified partial name.
  * 
  * @param {String} type
+ * @param {String} sub_type
  * @param {String} partialName
- * @param {String} userID
+ * @param {tring} userID
  * 
  * @return {Promise} Promise - 
  *  resolve(): all resource objects that contain the partial
@@ -83,11 +84,14 @@ const dbCloudantConnect = () => {
  *          could be located that matches. 
  *  reject(): the err object from the underlying data store
  */
-function find(type, partialName, userID) {
+function find(type, sub_type, partialName, userID) {
     return new Promise((resolve, reject) => {
         let selector = {}
         if (type) {
             selector['type'] = type;
+        }
+        if (sub_type) {
+            selector['sub_type'] = sub_type;
         }
         if (partialName) {
             let search = `(?i).*${partialName}.*`;
@@ -141,6 +145,7 @@ function deleteById(id, rev) {
  * Create a resource with the specified attributes
  * 
  * @param {String} type - the type of the item
+ * @param {String} sub_type - the type of the item
  * @param {String} name - the name of the item
  * @param {String} description - the description of the item
  * @param {String} quantity - the quantity available 
@@ -151,7 +156,7 @@ function deleteById(id, rev) {
  * @return {Promise} - promise that will be resolved (or rejected)
  * when the call to the DB completes
  */
-function create(type, name, description, quantity, location, contact, userID) {
+function create(type,sub_type, name, description, quantity, location, contact, userID) {
     return new Promise((resolve, reject) => {
         let itemId = uuidv4();
         let whenCreated = Date.now();
@@ -159,6 +164,7 @@ function create(type, name, description, quantity, location, contact, userID) {
             _id: itemId,
             id: itemId,
             type: type,
+            sub_type: sub_type,
             name: name,
             description: description,
             quantity: quantity,
@@ -187,6 +193,7 @@ function create(type, name, description, quantity, location, contact, userID) {
  * 
  * @param {String} type - the type of the item
  * @param {String} name - the name of the item
+ * @param {String} sub_type - the type of the item
  * @param {String} description - the description of the item
  * @param {String} quantity - the quantity available 
  * @param {String} location - the GPS location of the item
@@ -196,7 +203,7 @@ function create(type, name, description, quantity, location, contact, userID) {
  * @return {Promise} - promise that will be resolved (or rejected)
  * when the call to the DB completes
  */
-function update(id, type, name, description, quantity, location, contact, userID) {
+function update(id, type,sub_type, name, description, quantity, location, contact, userID) {
     return new Promise((resolve, reject) => {
         db.get(id, (err, document) => {
             if (err) {
@@ -207,6 +214,7 @@ function update(id, type, name, description, quantity, location, contact, userID
                     _rev: document._rev,            // Specifiying the _rev turns this into an update
                 }
                 if (type) {item["type"] = type} else {item["type"] = document.type};
+                if (sub_type) {item["sub_type"] = sub_type} else {item["sub_type"] = document.sub_type};
                 if (name) {item["name"] = name} else {item["name"] = document.name};
                 if (description) {item["description"] = description} else {item["description"] = document.description};
                 if (quantity) {item["quantity"] = quantity} else {item["quantity"] = document.quantity};

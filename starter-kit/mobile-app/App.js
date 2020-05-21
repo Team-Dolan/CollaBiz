@@ -36,7 +36,7 @@ const DonationsStackOptions = ({ navigation }) => {
   return ({
     headerRight: () => (
       <Button
-        onPress={() => navigation.navigate('Add Donation')}
+        onPress={() => navigation.navigate('Add Inventory')}
         title='Add '
       />
     )
@@ -66,7 +66,7 @@ const TabLayout = () => (
       }}
     />
     <Tab.Screen
-      name='Donate'
+      name='Inventory'
       component={DonateStackLayout}
       options={{
         tabBarIcon: ({color}) => (<DonateIcon fill={color} />)
@@ -84,9 +84,9 @@ const TabLayout = () => (
 
 const DonateStackLayout = () => (
   <Stack.Navigator>
-  <Stack.Screen name='My Donations' component={MyResources} options={DonationsStackOptions} />
-    <Stack.Screen name='Add Donation' component={AddResource} />
-    <Stack.Screen name='Edit Donation' component={EditResource} />
+  <Stack.Screen name='My Inventory' component={MyResources} options={DonationsStackOptions} />
+    <Stack.Screen name='Add Inventory' component={AddResource} />
+    <Stack.Screen name='Edit Inventory' component={EditResource} />
   </Stack.Navigator>
 );
 

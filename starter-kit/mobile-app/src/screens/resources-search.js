@@ -21,6 +21,14 @@ const styles = StyleSheet.create({
     fontSize: 14,
     paddingBottom: 5
   },
+  splitView: {
+    flexDirection: 'row',
+    justifyContent: 'space-between'
+  },
+  typeArea: {
+    width: '50%'
+     
+  },
   selector: {
     fontFamily: 'IBMPlexSans-Medium',
     backgroundColor: '#fff',
@@ -80,7 +88,7 @@ const styles = StyleSheet.create({
 });
 
 const SearchResources = function ({ route, navigation }) {
-  const [query, setQuery] = React.useState({ type: 'Food', name: '' });
+  const [query, setQuery] = React.useState({ type: '', sub_type: '',name: '' });
   const [items, setItems] = React.useState([]);
   const [info, setInfo] = React.useState('');
 
@@ -116,18 +124,52 @@ const SearchResources = function ({ route, navigation }) {
   return (
     <View style={styles.outerView}>
       <View style={styles.inputsView}>
-        <Text style={styles.label}>Type</Text>
-        <PickerSelect
-          style={{ inputIOS: styles.selector }}
-          value={query.type}
-          onValueChange={(t) => setQuery({ ...query, type: t })}
-          items={[
-              { label: 'Food', value: 'Food' },
-              { label: 'Help', value: 'Help' },
-              { label: 'Other', value: 'Other' }
-          ]}
-        />
-        <Text style={styles.label}>Name</Text>
+        <View style={styles.splitView}>
+        <View style={styles.typeArea}>
+          <Text style={styles.label}>Category</Text>
+          <PickerSelect
+            style={{ inputIOS: styles.selector }}
+            value={query.type}
+            onValueChange={(t) => setQuery({ ...query, type: t })}
+            items={[
+                { label: 'Electronics', value: 'Electronics' },
+                { label: 'Pharmacy', value: 'Pharmacy' },
+                { label: 'Other', value: 'Other' }
+            ]}
+          />
+        </View>
+        <View style={styles.typeArea}>
+          <Text style={styles.label}>Sub Category</Text> 
+           { query.type == 'Electronics' &&
+           <PickerSelect
+            style={{ inputIOS: styles.selector }}
+            value = {query.sub_type}
+            onValueChange={(t) => setQuery({ ...query, sub_type: t })}
+            items={[
+                { label: 'Computer Equipments', value: 'Computer Equipments' },
+                { label: 'Audio System', value: 'Audio System' },
+                { label: 'Other', value: 'Other' }]}/>}
+      
+          { query.type == 'Pharmacy' &&
+           <PickerSelect
+            style={{ inputIOS: styles.selector }}
+            value={query.sub_type}
+            onValueChange={(t) => setQuery({ ...query, sub_type: t })}
+            items={[
+              { label: 'AntiBacterial', value: 'AntiBacterial' },
+              { label: 'AntiViral', value: 'AntiViral' },
+              { label: 'Other', value: 'Other' }]}/>}
+  
+           { query.type == 'Other' &&
+           <PickerSelect
+            style={{ inputIOS: styles.selector }}
+            value={query.sub_type}
+            onValueChange={(t) => setQuery({ ...query, sub_type: t })}
+            items={[ { label: 'Other', value: 'Other' }]}/>}
+          
+        </View>
+        </View>
+        <Text style={styles.label}>Item Name</Text>
         <TextInput
           style={styles.textInput}
           value={query.name}
@@ -135,7 +177,7 @@ const SearchResources = function ({ route, navigation }) {
           onSubmitEditing={searchItem}
           returnKeyType='send'
           enablesReturnKeyAutomatically={true}
-          placeholder='e.g., Tomotatoes'
+          placeholder='e.g., Hp P1007'
           blurOnSubmit={false}
         />
         <TouchableOpacity onPress={searchItem}>
@@ -151,6 +193,7 @@ const SearchResources = function ({ route, navigation }) {
         keyExtractor={item => item.id || item['_id']}
       />
     </View>
+  
   );
 };
 

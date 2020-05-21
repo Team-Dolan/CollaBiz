@@ -86,7 +86,7 @@ const styles = StyleSheet.create({
 });
 
 const EditResource = (props) => {
-  const clearItem = { userID: userID(), e: 'Food', name: '', description: '', location: '', contact: '', quantity: '1' }
+  const clearItem = { userID: userID(), type: '' ,sub_type: '', name: '', description: '', location: '', contact: '', quantity: '' }
   const [item, setItem] = React.useState(clearItem);
   const [useLocation, setUseLocation] = React.useState(false);
   const [position, setPosition] = React.useState({})
@@ -96,7 +96,8 @@ const EditResource = (props) => {
       const item = props.route.params.item;
       setItem({ 
         ...item,
-        quantity: item.quantity.toString()
+        quantity: item.quantity.toString(),
+        contact: item.contact.toString()
        });
 
       Geolocation.getCurrentPosition((pos) => {
@@ -119,6 +120,7 @@ const EditResource = (props) => {
     const payload = {
       ...item,
       quantity: isNaN(item.quantity) ? 1 : parseInt(item.quantity),
+      contact:  parseInt(item.contact),
       id: item.id || item['_id']
     };
 
@@ -162,47 +164,67 @@ const EditResource = (props) => {
   };
   
   return (
+   
     <ScrollView style={styles.outerView}>
       <View style={styles.splitView}>
         <View style={styles.typeArea}>
-          <Text style={styles.label}>Type</Text>
+          <Text style={styles.label}>Category</Text>
           <PickerSelect
             style={{ inputIOS: styles.selector }}
             value={item.type}
             onValueChange={(t) => setItem({ ...item, type: t })}
             items={[
-                { label: 'Food', value: 'Food' },
-                { label: 'Help', value: 'Help' },
+                { label: 'Electronics', value: 'Electronics' },
+                { label: 'Pharmacy', value: 'Pharmacy' },
                 { label: 'Other', value: 'Other' }
             ]}
           />
         </View>
-        <View style={styles.quantityArea}>
-          <Text style={styles.label}>Quantity</Text>
-          <TextInput
-            style={styles.textInput}
-            value={item.quantity}
-            onChangeText={(t) => setItem({ ...item, quantity: t})}
-            onSubmitEditing={updateItem}
-            returnKeyType='send'
-            enablesReturnKeyAutomatically={true}
-            placeholder='e.g., 10'
-            keyboardType='numeric'
-          />
+        <View style={styles.typeArea}>
+          <Text style={styles.label}>Sub Category</Text> 
+           { item.type == 'Electronics' &&
+           <PickerSelect
+            style={{ inputIOS: styles.selector }}
+            value = {item.sub_type}
+            onValueChange={(t) => setItem({ ...item, sub_type: t })}
+            items={[
+                { label: 'Computer Equipments', value: 'Computer Equipments' },
+                { label: 'Audio System', value: 'Audio System' },
+                { label: 'Other', value: 'Other' }]}/>}
+      
+          { item.type == 'Pharmacy' &&
+           <PickerSelect
+            style={{ inputIOS: styles.selector }}
+            value={item.sub_type}
+            onValueChange={(t) => setItem({ ...item, sub_type: t })}
+            items={[
+              { label: 'AntiBacterial', value: 'AntiBacterial' },
+              { label: 'AntiViral', value: 'AntiViral' },
+                { label: 'Other', value: 'Other' }]}/>}
+  
+           { item.type == 'Other' &&
+           <PickerSelect
+            style={{ inputIOS: styles.selector }}
+            value={item.sub_type}
+            onValueChange={(t) => setItem({ ...item, sub_type: t })}
+            items={[ { label: 'Other', value: 'Other' }]}/>}
+          
         </View>
       </View>
-
-      <Text style={styles.label}>Name</Text>
-      <TextInput
-        style={styles.textInput}
-        value={item.name}
-        onChangeText={(t) => setItem({ ...item, name: t})}
-        onSubmitEditing={updateItem}
-        returnKeyType='send'
-        enablesReturnKeyAutomatically={true}
-        placeholder='e.g., Tomotatoes'
-        blurOnSubmit={false}
-      />
+      
+       <Text style={styles.label}>Name</Text>
+         <TextInput
+          style={styles.textInput}
+          value={item.name}
+          onChangeText={(t) => setItem({ ...item, name: t})}
+          onSubmitEditing={updateItem}
+          returnKeyType='send'
+          enablesReturnKeyAutomatically={true}
+          placeholder='e.g., Canon Printer'
+          blurOnSubmit={false}
+          />
+       
+        
       <Text style={styles.label}>Contact</Text>
       <TextInput
         style={styles.textInput}
@@ -211,7 +233,9 @@ const EditResource = (props) => {
         onSubmitEditing={updateItem}
         returnKeyType='send'
         enablesReturnKeyAutomatically={true}
-        placeholder='user@domain.com'
+        placeholder='123456789'
+        
+
       />
       <Text style={styles.label}>Description</Text>
       <TextInput
@@ -221,8 +245,20 @@ const EditResource = (props) => {
         onSubmitEditing={updateItem}
         returnKeyType='send'
         enablesReturnKeyAutomatically={true}
-        placeholder='e.g., small baskets of cherry tomatoes'
+        placeholder='e.g., Laserjet Series'
       />
+      <View style={styles.quantityArea}>
+          <Text style={styles.label}>Quantity</Text>
+            <TextInput
+              style={styles.textInput}
+              value={item.quantity}
+              onChangeText={(t) => setItem({ ...item, quantity: t})}
+              onSubmitEditing={updateItem}
+              returnKeyType='send'
+              enablesReturnKeyAutomatically={true}
+              placeholder='e.g., 10'
+            />
+         </View>
       <Text style={styles.label}>Location</Text>
       <View style={styles.checkboxContainer}>
         <TouchableOpacity onPress={toggleUseLocation}>
@@ -244,10 +280,12 @@ const EditResource = (props) => {
         returnKeyType='send'
         enablesReturnKeyAutomatically={true}
         placeholder='street address, city, state'
+        editable={!useLocation}
       />
 
       {
         item.type !== '' &&
+        item.s_category !== '' &&
         item.name.trim() !== '' &&
         item.contact.trim() !== '' &&
         <TouchableOpacity onPress={updateItem}>
