@@ -9,14 +9,15 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import LoadingScreen from './src/screens/loading';
 import Home from './src/screens/home';
-import Chat from './src/screens/chat';
+import ChatBot from './src/screens/bot';
+import UserChat from './src/screens/user-chat';
 import SearchResources from './src/screens/resources-search';
 import AddResource from './src/screens/resource-add';
 import EditResource from './src/screens/resource-edit';
 import MyResources from './src/screens/resources-my';
 import Map from './src/screens/map';
 
-import { HomeIcon, DonateIcon, SearchIcon } from './src/images/svg-icons';
+import { HomeIcon, DonateIcon, SearchIcon, ChatIcon } from './src/images/svg-icons';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -25,8 +26,8 @@ const ResourcesStackOptions = ({ navigation }) => {
   return ({
     headerRight: () => (
       <Button
-        onPress={() => navigation.navigate('Chat')}
-        title='Chat '
+        onPress={() => navigation.navigate('ChatBot')}
+        title='Chat with Watson'
       />
     )
   });
@@ -36,7 +37,7 @@ const DonationsStackOptions = ({ navigation }) => {
   return ({
     headerRight: () => (
       <Button
-        onPress={() => navigation.navigate('Add Donation')}
+        onPress={() => navigation.navigate('Add a product')}
         title='Add '
       />
     )
@@ -66,7 +67,7 @@ const TabLayout = () => (
       }}
     />
     <Tab.Screen
-      name='Donate'
+      name='Inventory'
       component={DonateStackLayout}
       options={{
         tabBarIcon: ({color}) => (<DonateIcon fill={color} />)
@@ -79,14 +80,21 @@ const TabLayout = () => (
         tabBarIcon: ({color}) => (<SearchIcon fill={color} />)
       }}
     />
+    <Tab.Screen
+      name='Chat'
+      component={Chat}
+      options={{
+        tabBarIcon: ({color}) => (<ChatIcon fill={color} />)
+      }}
+    />
   </Tab.Navigator>
 );
 
 const DonateStackLayout = () => (
   <Stack.Navigator>
-  <Stack.Screen name='My Donations' component={MyResources} options={DonationsStackOptions} />
-    <Stack.Screen name='Add Donation' component={AddResource} />
-    <Stack.Screen name='Edit Donation' component={EditResource} />
+  <Stack.Screen name='My Inventory' component={MyResources} options={DonationsStackOptions} />
+    <Stack.Screen name='Add a product' component={AddResource} />
+    <Stack.Screen name='Modify product' component={EditResource} />
   </Stack.Navigator>
 );
 
