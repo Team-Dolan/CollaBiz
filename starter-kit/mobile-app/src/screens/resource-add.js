@@ -76,7 +76,7 @@ const styles = StyleSheet.create({
 });
 
 const AddResource = function ({ navigation }) {
-  const clearItem = { userID: userID(), type: 'Food', name: '', description: '', location: '', contact: '', quantity: '1' }
+  const clearItem = { userID: userID(), type: 'Electronics', name: '', description: '', location: '', contact: '', quantity: '1' }
   const [item, setItem] = React.useState(clearItem);
   const [useLocation, setUseLocation] = React.useState(true);
   const [position, setPosition] = React.useState({})
@@ -132,7 +132,7 @@ const AddResource = function ({ navigation }) {
             value={item.type}
             onValueChange={(t) => setItem({ ...item, type: t })}
             items={[
-                { label: 'Food', value: 'Food' },
+                { label: 'Food', value: 'Electronics' },
                 { label: 'Help', value: 'Help' },
                 { label: 'Other', value: 'Other' }
             ]}
