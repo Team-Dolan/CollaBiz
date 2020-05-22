@@ -4,7 +4,6 @@ import { ScrollView } from 'react-native-gesture-handler';
 import PickerSelect from 'react-native-picker-select';
 import { CheckedIcon, UncheckedIcon } from '../images/svg-icons';
 import Geolocation from '@react-native-community/geolocation';
-
 import { update, remove, userID } from '../lib/utils'
 
 const styles = StyleSheet.create({
