@@ -62,9 +62,9 @@ We aim to establish a networking model for business to function especially Pharm
 - [x] Watson Assistant - Training - Covid only updates
 - [x] Watson Assistant - Training - User support
 - [x] Chatroom service for Collaborators - Firebase - Group Chat
-- [-] Complaint Form/ Report False Supply
-- [-] Order and Logistics Ticketing
-- [-] Sales Tracking and Review
+- [ ] Complaint Form/ Report False Supply
+- [ ] Order and Logistics Ticketing
+- [ ] Sales Tracking and Review
 
 ## How it works
 <details>
@@ -77,14 +77,13 @@ A Recipient, who is in need of food, supplies, resources, or other essentials, o
 </details>
 
 ## Diagrams
-<details>
-  <summary>Click here to view!</summary>
 
 ![Cooperation architecture diagram](/images/architecture-diagram.png)
 
-
 ![Flow-chart diagram](/images/flow-chart.png)
 
+<details>
+  <summary>Click here to view!</summary>
 This solution starter idea combines a chat interface (Watson Assistant), data storage to hold the status of supplies available, and location services with real-time information to get users the information they need.
 
 1. The Recipient launches the mobile app and can access information across multiple services.

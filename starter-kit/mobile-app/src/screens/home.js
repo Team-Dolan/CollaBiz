@@ -64,6 +64,10 @@ const styles = StyleSheet.create({
 const Home = () => (
   <View style={styles.center}>
     <ScrollView style={styles.scroll}>
+    <Image
+        style={styles.image}
+        source={require('../images/logo-512.png')}
+      />
       <Text style={styles.subtitle}>Bring businesses together</Text>
       <Text style={styles.title}>Collab-o-Biz</Text>
       <Text style={styles.content}>
