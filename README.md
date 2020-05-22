@@ -1,9 +1,10 @@
-# Community collaboration in the context of COVID-19
+# CollaBiz - an initiative to collaborate small businesses
 
-This solution starter was created by technologists from IBM.
+This solution is based over the community cooperation model provided by technologists from IBM.
 
-## Authors
-
+## Original Authors
+<details>
+  <summary>Click here to view!</summary>
 - Henry Nash
 - Va Barbosa
 - Javier Torres
@@ -13,6 +14,13 @@ This solution starter was created by technologists from IBM.
 - Robert Loredo
 - Debbie Kestin Schildkraut
 - Bruce Weed
+</details>
+
+## Team-Dolan
+
+- Rohan Taneja
+- Ujjawal Aggarawal
+- Aaryaman Saini
 
 ## Contents
 
@@ -30,13 +38,9 @@ This solution starter was created by technologists from IBM.
 
 ### What's the problem?
 
-There is a growing interest in enabling communities to cooperate among themselves to solve these problems, whether it be to advertise where supplies are held, offer assistance for collections, or other local services like volunteer deliveries.
+The pandemic has caused chaos in not only our community but in every corner of this world. The problem being faced in most part of societies is communal movement. As no one could recognized the person suffering with virus. To break such a chain reaction we have to restrict movement of people in the community and to minimize that we can restrict it by bring the necessities and daily-use product as close to the community.
 
-In times of crisis, such as the 2020 SARS-COV-2 (COVID-19 or "Novel Coronavirus") crisis, while federal and local governments may be rolling out broad programs, cooperation at the local level is usually the most effective way of getting help to where it is most needed as quickly as possible. Traditional social media is one way of communicating within a community, but this is (by its very design) not locally focused, and often not sufficiently structured to enable rapid discovery of help needed.
-
-In the COVID-19 crisis, we have already seen shortages of local food, medical equipment, and other supplies. In addition, the recommended (or required) self-isolation and social distancing measures can compound the problem by preventing people from easily getting to locations with the best stocks of supplies.
-
-What is needed is a solution that empowers communities to easily connect and provide this information to each other.
+So, it's the time when businesses could take an initiaive in doing so. It would not only help in keeping the business afloat by keeping the supplies check but also bring things as requested by the community as close as possible to them.
 
 ### How can technology help?
 
@@ -46,18 +50,40 @@ Creating a chatbot using Watson Assistant can help you address the issues that y
 
 ## The idea
 
-The goal is to provide a mobile application, along with server-side components, that serves as the basis for developers to build out a community cooperation application that addresses local needs for food, equipment, and resources.
-It would allow both "Suppliers" (such as a store or a community member who has produce they can sell or distribute) to make people aware of what the have; and consumers ("Recipients") to locate where these supplies are, and, if necessary, guide them to the appropriate locations to pick them up.
+The goal is make a web-application to bring such a collaboration at vast level. Using the given kit for starters we added more form and categories to bring suitable suppliers and recipients together. For starters, the collaboration functionality as provided we added a chat functionality on top to bring the collaborators together in the chatroom. A ticketing system for order generation and logistic handling has to be added to bring a sense of security for orders to be supplied.
+
+We aim to establish a networking model for business to function especially Pharmacies which tend to be most frequently visited for need of sanitization and hygiene products. This helps in modelling a market to get in touch with the supply chain as close and conviniently and restrict the movement of community to look in search of certain products.
+
+## Features
+
+- [x] Home Activity
+- [x] Inventory - Add, Edit, and Delete
+- [x] Location Services - HERE
+- [x] Watson Assistant - Training - Covid only updates
+- [x] Watson Assistant - Training - User support
+- [x] Chatroom service for Collaborators - Firebase - Group Chat
+- [] Complaint Form/ Report False Supply
+- [] Order and Logistics Ticketing
+- [] Sales Tracking and Review
 
 ## How it works
+<details>
+  <summary>Click here to view!</summary>
 
 A Supplier (who may be a regular resident, a small business, a voluntary organization, etc.) that has food, supplies, resources, or other essentials they can provide opens the mobile application and fills out a brief form that indicates what they have. This information is then stored in a database in the IBM Cloud.
 
 A Recipient, who is in need of food, supplies, resources, or other essentials, opens the mobile application and can use the chat interface to locate supplies near them. For instance, they might type "Where can I find bread?" or "Can someone collect my shopping for me?" The mobile application then accesses the database (after first understanding the question via Watson Assistant) and then displays a map showing locally where they can find what they are looking for.
 
+</details>
+
 ## Diagrams
+<details>
+  <summary>Click here to view!</summary>
 
 ![Cooperation architecture diagram](/images/architecture-diagram.png)
+
+
+![Flow-chart diagram](/images/flow-chart.png)
 
 This solution starter idea combines a chat interface (Watson Assistant), data storage to hold the status of supplies available, and location services with real-time information to get users the information they need.
 
@@ -66,7 +92,10 @@ This solution starter idea combines a chat interface (Watson Assistant), data st
 1. The Supplier can post the availability of stock or services they can provide, as well as locate the items they need.
 1. The Recipient can obtain geolocation data to plot routes to collect (or drop off) supplies using HERE Location Services.
 
+</details>
 ## Documents
+<details>
+  <summary>Click here to view!</summary>
 
 Trusted sources for COVID-19 Information:
 - [CDC COVID-19 FAQ](https://www.cdc.gov/coronavirus/2019-ncov/faq.html)
@@ -74,9 +103,13 @@ Trusted sources for COVID-19 Information:
 - [Johns Hopkins University Coronavirus (includes tracking map)](https://coronavirus.jhu.edu)
 - [National Foundation for Infectious Diseases](https://www.nfid.org/infectious-diseases/frequently-asked-questions-about-novel-coronavirus-2019-ncov/)
 
+</details>
+
 ## Technology
 
 ### IBM Cloud Services
+<details>
+  <summary>Click here to view!</summary>
 
 - [Bot Asset Exchange](https://developer.ibm.com/code/exchanges/bots/)
 - [IBM Watson Assistant](https://www.ibm.com/cloud/watson-assistant/)
@@ -103,7 +136,10 @@ Trusted sources for COVID-19 Information:
 - [HERE Routing](https://developer.here.com/products/routing)
 - [Integrate interactive maps and location features into your application](https://developer.here.com/documentation/)
 
+</details>
 ## Getting started
+<details>
+  <summary>Click here to view!</summary>
 
 ### Prerequisites
 
@@ -122,7 +158,11 @@ Trusted sources for COVID-19 Information:
         - [Create an Android Virtual Device (AVD)](https://developer.android.com/studio/run/managing-avds.html) - with Pie image (API Level 28)
 - Clone the [repository](https://github.com/Call-for-Code/Solution-Starter-Kit-Cooperation-2020).
 
+</details>
+
 ### Steps
+<details>
+  <summary>Click here to view!</summary>
 
 1. [Set up an instance of Watson Assistant](#1-set-up-an-instance-of-watson-assistant).
 1. [Provision a CouchDB instance using Cloudant](#2-Provision-a-CouchDB-instance-using-Cloudant).
@@ -201,7 +241,12 @@ To run the mobile application (using the Xcode iOS Simulator or Android Studio E
         - **Android only**: `npm run android`
             > **Note**: Your Android Studio needs to have the `Android 9 (Pie)` SDK and a `Pie API Level 28` virtual device
 
+</details>
+
 With the application running in the simulator/emulator, you should be able to navigate through the various screens:
+
+<details>
+  <summary>Click here to view!</summary>
 
 ![Intro Screen](/images/0-screen-home.png)
 ![Donate Screen](/images/1-screen-donate.png)
@@ -209,8 +254,12 @@ With the application running in the simulator/emulator, you should be able to na
 ![Chat Screen](/images/5-screen-chat.png)
 ![Map1 Screen](/images/3-screen-map.png)
 ![Map2 Screen](/images/4-screen-map.png)
+</details>
 
 ## Resources
+
+<details>
+  <summary>Click here to view!</summary>
 
 - [IBM Cloud](https://www.ibm.com/cloud)
 - [Watson Assistant](https://cloud.ibm.com/docs/assistant?topic=assistant-getting-started)
@@ -219,6 +268,8 @@ With the application running in the simulator/emulator, you should be able to na
 - [Node.js](https://nodejs.org)
 - [React Native](https://reactnative.dev/)
 - [IBM Blockchain for Developers](https://developer.ibm.com/technologies/blockchain/)
+
+</details>
 
 ## License
 

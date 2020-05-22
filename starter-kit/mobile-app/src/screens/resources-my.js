@@ -63,7 +63,7 @@ const MyResources = function ({ navigation }) {
   const Item = (props) => {
     return (
       <TouchableOpacity style={styles.itemTouchable}
-          onPress={() => { navigation.navigate('Edit Donation', { item: props }); }}>
+          onPress={() => { navigation.navigate('Modify product', { item: props }); }}>
         <View style={styles.itemView}>
           <Text style={styles.itemName}>{props.name}</Text>
           <Text style={styles.itemQuantity}> ( {props.quantity} ) </Text>
@@ -84,7 +84,7 @@ const MyResources = function ({ navigation }) {
   } else {
     return (
       <View style={styles.emptyListView}>
-        <Text style={styles.emptyListText}>You currently have no donations listed</Text>
+        <Text style={styles.emptyListText}>You currently have no products listed</Text>
       </View>
     )
   }

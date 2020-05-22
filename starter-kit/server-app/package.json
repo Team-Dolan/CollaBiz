@@ -1,7 +1,7 @@
 {
-  "name": "solution-starter-kit-cooperation-2020-server",
+  "name": "collabiz-server",
   "version": "0.0.1",
-  "description": "Call for Code 2020 solution starter kit for community collaboration",
+  "description": "Using starter kit",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
