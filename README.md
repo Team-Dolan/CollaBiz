@@ -22,12 +22,6 @@ This solution is based over the community cooperation model provided by technolo
 - Ujjawal Aggarawal
 - Aaryaman Saini
 
-## Team-Dolan
-
-- Rohan Taneja
-- Ujjuwal Agarawal
-- Aaryaman Saini
-
 ## Contents
 
 1. [Overview](#overview)
@@ -68,9 +62,9 @@ We aim to establish a networking model for business to function especially Pharm
 - [x] Watson Assistant - Training - Covid only updates
 - [x] Watson Assistant - Training - User support
 - [x] Chatroom service for Collaborators - Firebase - Group Chat
-- [] Complaint Form/ Report False Supply
-- [] Order and Logistics Ticketing
-- [] Sales Tracking and Review
+- [-] Complaint Form/ Report False Supply
+- [-] Order and Logistics Ticketing
+- [-] Sales Tracking and Review
 
 ## How it works
 <details>
@@ -99,6 +93,7 @@ This solution starter idea combines a chat interface (Watson Assistant), data st
 1. The Recipient can obtain geolocation data to plot routes to collect (or drop off) supplies using HERE Location Services.
 
 </details>
+
 ## Documents
 <details>
   <summary>Click here to view!</summary>
@@ -143,6 +138,7 @@ Trusted sources for COVID-19 Information:
 - [Integrate interactive maps and location features into your application](https://developer.here.com/documentation/)
 
 </details>
+
 ## Getting started
 <details>
   <summary>Click here to view!</summary>
