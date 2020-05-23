@@ -31,7 +31,7 @@ class UserChat extends React.Component {
           value={this.state.name}
         />
         <TouchableOpacity onPress={this.onPress}>
-          <Text style={styles.buttonText}>Next</Text>
+          <Text style={styles.button}>Next</Text>
         </TouchableOpacity>
       </View>
     );
@@ -45,18 +45,33 @@ const styles = StyleSheet.create({
     marginTop: offset,
     marginLeft: offset,
     fontSize: offset,
+    fontFamily: 'IBMPlexSans-Light',
+    fontSize: 24,
+    color: '#323232',
+    textDecorationColor: '#D0E2FF',
+    textDecorationLine: 'underline',
+    paddingBottom: 5,
+    paddingTop: 20
   },
   nameInput: {
     height: offset * 2,
-
+    width: 175,
     margin: offset,
     paddingHorizontal: offset,
     borderColor: '#111111',
     borderWidth: 1,
   },
-  buttonText: {
-    marginLeft: offset,
-    fontSize: offset,
+  button: {
+    margin: offset,
+    width: 175,
+    backgroundColor: '#1062FE',
+    color: '#FFFFFF',
+    fontFamily: 'IBMPlexSans-Medium',
+    fontSize: 16,
+    overflow: 'hidden',
+    padding: 12,
+    textAlign:'center',
+    marginTop: 15
   },
 });
 

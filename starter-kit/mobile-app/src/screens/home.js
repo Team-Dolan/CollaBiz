@@ -64,10 +64,6 @@ const styles = StyleSheet.create({
 const Home = () => (
   <View style={styles.center}>
     <ScrollView style={styles.scroll}>
-    <Image
-        style={styles.image}
-        source={require('../images/logo-512.png')}
-      />
       <Text style={styles.subtitle}>Bring businesses together</Text>
       <Text style={styles.title}>Collab-o-Biz</Text>
       <Text style={styles.content}>
@@ -80,11 +76,8 @@ const Home = () => (
 		community movement.
       </Text>
       <View style={styles.buttonGroup}>
-        <TouchableOpacity onPress={() => Linking.openURL('https://developer.ibm.com/callforcode')}>
+        <TouchableOpacity onPress={() => Linking.openURL('https://github.com/Team-Dolan/Solution')}>
           <Text style={styles.button}>Learn more</Text>
-        </TouchableOpacity>
-        <TouchableOpacity onPress={() => Linking.openURL('https://github.com/Call-for-Code/Solution-Starter-Kit-Cooperation-2020')}>
-          <Text style={styles.button}>Get the code</Text>
         </TouchableOpacity>
       </View>
     </ScrollView>
