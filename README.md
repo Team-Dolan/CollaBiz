@@ -209,7 +209,7 @@ With the application running in the simulator/emulator, you should be able to na
 
 ![Home](/images/Home.JPG)
 ![Donate Screen](/images/Current invemtory.JPG)
-![Search Screen](/images/Add_inv.JPG)
+![Search Screen](/images/add_inven.JPG)
 ![Modify Screen](/images/update_inv.JPG)
 ![Search Screen](/images/search_inv.JPG)
 ![Chat watson](/images/chat_watson.JPG)
