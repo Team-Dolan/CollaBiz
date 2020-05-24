@@ -1,24 +1,10 @@
-# CollaBiz - an initiative to collaborate small businesses
+# CollabBiz - an initiative to collaborate small businesses
 
 This solution is based over the community cooperation model provided by technologists from IBM.
 
-## Original Authors
-<details>
-  <summary>Click here to view!</summary>
-- Henry Nash
-- Va Barbosa
-- Javier Torres
-- Omer Arad
-- JJ Asghar
-- Jody Burks
-- Robert Loredo
-- Debbie Kestin Schildkraut
-- Bruce Weed
-</details>
-
 ## Team-Dolan
 
-- Rohan Taneja
+- <b>Rohan Taneja</b> <b>TEAM LEADER</b>
 - Ujjawal Aggarawal
 - Aaryaman Saini
 
@@ -28,19 +14,18 @@ This solution is based over the community cooperation model provided by technolo
 2. [The idea](#the-idea)
 3. [How it works](#how-it-works)
 4. [Diagrams](#diagrams)
-5. [Documents](#documents)
-6. [Technology](#technology)
-7. [Getting started](#getting-started)
-8. [Resources](#resources)
-9. [License](#license)
+5. [Technology](#technology)
+6. [Getting started](#getting-started)
+7. [Resources](#resources)
+8. [License](#license)
 
 ## Overview
 
 ### What's the problem?
 
-The pandemic has caused chaos in not only our community but in every corner of this world. The problem being faced in most part of societies is communal movement. As no one could recognized the person suffering with virus. To break such a chain reaction we have to restrict movement of people in the community and to minimize that we can restrict it by bring the necessities and daily-use product as close to the community.
-
-So, it's the time when businesses could take an initiaive in doing so. It would not only help in keeping the business afloat by keeping the supplies check but also bring things as requested by the community as close as possible to them.
+We identified two problems and came up with a solution that can help both the entities. These problems were identified from our own personal experiences when it became hard for us to get certain items in stores. COVID-19 is a pandemic as declared by WHO. Initially, people took this lightly as the cases were only limited to China. Gradually, cases were being reported all over the world and people then started to panic. Governments, in all countries, started taking measures to prevent the spread of this disease. Some of the measures taken by the governments, as suggested by WHO, are Social Distancing. To implement this, Indian Government declared LOCKDOWN, so that social distancing can be ensured. This is a big step and it did indeed help to control the number of cases in India. Many people stayed at home for their own safety and only essential workers were allowed to work.
+While this, the Lockdown, has proved to be a good step, but with this came a new problem. There are many small businesses, which depend on their daily sales and in Lockdown, many people stopped buying stuff. So, they had to face huge backlashes. Also, there are many things that people need like important medicines and electronics, but these are not available in their local stores on which they count normally. The reason for unavailability of such items in some stores can be because of restrictions on delivery of goods to every store. So, we can see there are two problems here.
+So, the question was, how can we help small businesses to be able to keep selling products and how can people get those products for which they would normally depend on local stores? The answer is CollabBiz.
 
 ### How can technology help?
 
@@ -65,16 +50,17 @@ We aim to establish a networking model for business to function especially Pharm
 - [ ] Complaint Form/ Report False Supply
 - [ ] Order and Logistics Ticketing
 - [ ] Sales Tracking and Review
+- [ ] Transaction History
+- [ ] Customer Record and many more 
 
 ## How it works
-<details>
-  <summary>Click here to view!</summary>
+
 
 A Supplier (who may be a regular resident, a small business, a voluntary organization, etc.) that has food, supplies, resources, or other essentials they can provide opens the mobile application and fills out a brief form that indicates what they have. This information is then stored in a database in the IBM Cloud.
 
 A Recipient, who is in need of food, supplies, resources, or other essentials, opens the mobile application and can use the chat interface to locate supplies near them. For instance, they might type "Where can I find bread?" or "Can someone collect my shopping for me?" The mobile application then accesses the database (after first understanding the question via Watson Assistant) and then displays a map showing locally where they can find what they are looking for.
 
-</details>
+
 
 ## Diagrams
 
@@ -82,28 +68,9 @@ A Recipient, who is in need of food, supplies, resources, or other essentials, o
 
 ![Flow-chart diagram](/images/flow-chart.png)
 
-<details>
-  <summary>Click here to view!</summary>
-This solution starter idea combines a chat interface (Watson Assistant), data storage to hold the status of supplies available, and location services with real-time information to get users the information they need.
 
-1. The Recipient launches the mobile app and can access information across multiple services.
-1. The Recipient can ask questions to Watson Assistant and get answers on food/service availability questions.
-1. The Supplier can post the availability of stock or services they can provide, as well as locate the items they need.
-1. The Recipient can obtain geolocation data to plot routes to collect (or drop off) supplies using HERE Location Services.
 
-</details>
 
-## Documents
-<details>
-  <summary>Click here to view!</summary>
-
-Trusted sources for COVID-19 Information:
-- [CDC COVID-19 FAQ](https://www.cdc.gov/coronavirus/2019-ncov/faq.html)
-- [WHO COVID-19 page](https://www.who.int/health-topics/coronavirus)
-- [Johns Hopkins University Coronavirus (includes tracking map)](https://coronavirus.jhu.edu)
-- [National Foundation for Infectious Diseases](https://www.nfid.org/infectious-diseases/frequently-asked-questions-about-novel-coronavirus-2019-ncov/)
-
-</details>
 
 ## Technology
 
@@ -259,9 +226,6 @@ With the application running in the simulator/emulator, you should be able to na
 
 ## Resources
 
-<details>
-  <summary>Click here to view!</summary>
-
 - [IBM Cloud](https://www.ibm.com/cloud)
 - [Watson Assistant](https://cloud.ibm.com/docs/assistant?topic=assistant-getting-started)
 - [IBM Cloudant](https://cloud.ibm.com/docs/Cloudant?topic=cloudant-overview)
@@ -270,7 +234,6 @@ With the application running in the simulator/emulator, you should be able to na
 - [React Native](https://reactnative.dev/)
 - [IBM Blockchain for Developers](https://developer.ibm.com/technologies/blockchain/)
 
-</details>
 
 ## License
 
