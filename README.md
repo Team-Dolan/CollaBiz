@@ -117,9 +117,6 @@ A Recipient, who is in need of food, supplies, resources, or other essentials, o
 - Install [React Native CLI dependencies](https://reactnative.dev/docs/getting-started.html).
     - [Node.js](https://nodejs.org/en/)
     - [Watchman](https://facebook.github.io/watchman/docs/install)
-    - **iOS only**
-        - [Xcode](https://itunes.apple.com/us/app/xcode/id497799835?mt=12)
-        - [CocoaPods](https://guides.cocoapods.org/using/getting-started.html)
     - **Android only**
         - [Java Development Kit](https://www.oracle.com/java/technologies/javase-jdk8-downloads.html)
         - [Android Studio](https://developer.android.com/studio/index.html) - add Android 9 (Pie) SDK & configure `ANDROID_HOME`
@@ -200,12 +197,6 @@ To run the mobile application (using the Xcode iOS Simulator or Android Studio E
 1. From a terminal:
     1. Go to the `starter-kit/mobile-app` directory.
     1. Install the dependencies: `npm install`.
-    1. **iOS only**: Go to the `ios` directory: `cd ios`.
-    1. **iOS only**: Install pod dependencies: `pod install`.
-    1. **iOS only**: Return to the `mobile-app` directory: `cd ../`.
-    1. Launch the app in the simulator/emulator:
-        - **iOS only**: `npm run ios`
-            > **Note**: You should be running at least iOS 13.0. The first time you launch the simulator, you should ensure that you set a Location in the Features menu.
         - **Android only**: `npm run android`
             > **Note**: Your Android Studio needs to have the `Android 9 (Pie)` SDK and a `Pie API Level 28` virtual device
 
@@ -216,7 +207,7 @@ With the application running in the simulator/emulator, you should be able to na
 <details>
   <summary>Click here to view!</summary>
 
-![Intro Screen](/images/0-screen-home.png)
+![Intro Screen](/images/Home.jpg)
 ![Donate Screen](/images/1-screen-donate.png)
 ![Search Screen](/images/2-screen-search.png)
 ![Chat Screen](/images/5-screen-chat.png)
