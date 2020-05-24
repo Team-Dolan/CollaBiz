@@ -121,7 +121,7 @@ A Recipient, who is in need of food, supplies, resources, or other essentials, o
         - [Java Development Kit](https://www.oracle.com/java/technologies/javase-jdk8-downloads.html)
         - [Android Studio](https://developer.android.com/studio/index.html) - add Android 9 (Pie) SDK & configure `ANDROID_HOME`
         - [Create an Android Virtual Device (AVD)](https://developer.android.com/studio/run/managing-avds.html) - with Pie image (API Level 28)
-- Clone the [repository](https://github.com/Call-for-Code/Solution-Starter-Kit-Cooperation-2020).
+- Clone the [repository](https://github.com/Team-Dolan/CollaBiz.git).
 
 </details>
 
@@ -207,12 +207,14 @@ With the application running in the simulator/emulator, you should be able to na
 <details>
   <summary>Click here to view!</summary>
 
-![Intro Screen](/images/Home.jpg)
-![Donate Screen](/images/1-screen-donate.png)
-![Search Screen](/images/2-screen-search.png)
-![Chat Screen](/images/5-screen-chat.png)
-![Map1 Screen](/images/3-screen-map.png)
-![Map2 Screen](/images/4-screen-map.png)
+![Home](/images/Home.JPG)
+![Donate Screen](/images/Current invemtory.JPG)
+![Search Screen](/images/Add_inv.JPG)
+![Modify Screen](/images/update_inv.JPG)
+![Search Screen](/images/search_inv.JPG)
+![Chat watson](/images/chat_watson.JPG)
+![Enter Chat](/images/enter_chat.JPG)
+![Chat](/images/chat.JPG)
 </details>
 
 ## Resources
