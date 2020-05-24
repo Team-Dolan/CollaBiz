@@ -198,19 +198,13 @@ With the application running in the simulator/emulator, you should be able to na
 <details>
   <summary>Click here to view!</summary>
 <img align="left" width="320" height="530" src=/images/Home.JPG>
-<p align="center">
-  <img  width="320" height="530" src=/images/curr_inv.JPG>
-</p>
-<img align="right" width="320" height="530"  src=/images/add_inven.JPG>
-<img align="left" width="320" height="530" src=/images/update_inv.JPG>
-<p align="center">
-  <img width="320" height="530"  src=/images/search_inv.JPG>
-</p>
+<img align="right"  width="320" height="530" src=/images/curr_inv.JPG>
+<img align="left" width="320" height="530"  src=/images/add_inven.JPG>
+<img align="right" width="320" height="530" src=/images/update_inv.JPG>
+<img align="left" width="320" height="530"  src=/images/search_inv.JPG>
 <img align="right" width="320" height="530" src=/images/chat_watson.JPG>
 <img align="left"  width="320" height="530"  src=/images/enter_chat.JPG>
-<p align="center">
-  <img width="320" height="530" src=/images/chat.JPG>
-</p>
+<img align="right" width="320" height="530" src=/images/chat.JPG>
 </details>
 
 ## Resources
