@@ -5,7 +5,7 @@ This solution is based over the community cooperation model provided by technolo
 ## Team-Dolan
 
 - <b>Rohan Taneja</b> <b>TEAM LEADER</b>
-- Ujjawal Aggarawal
+- Ujjawal Aggarwal
 - Aaryaman Saini
 
 ## Contents
