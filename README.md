@@ -8,6 +8,20 @@ This solution is based over the community cooperation model provided by technolo
 - Ujjawal Aggarwal
 - Aaryaman Saini
 
+## Original Authors
+<details>
+  <summary>Click here to view!</summary>
+- Henry Nash
+- Va Barbosa
+- Javier Torres
+- Omer Arad
+- JJ Asghar
+- Jody Burks
+- Robert Loredo
+- Debbie Kestin Schildkraut
+- Bruce Weed
+</details>
+
 ## Contents
 
 1. [Overview](#overview)
@@ -60,17 +74,11 @@ A Supplier (who may be a regular resident, a small business, a voluntary organiz
 
 A Recipient, who is in need of food, supplies, resources, or other essentials, opens the mobile application and can use the chat interface to locate supplies near them. For instance, they might type "Where can I find bread?" or "Can someone collect my shopping for me?" The mobile application then accesses the database (after first understanding the question via Watson Assistant) and then displays a map showing locally where they can find what they are looking for.
 
-
-
 ## Diagrams
 
 ![Workflow diagram](/images/workflow.png)
 
 ![Flow-chart diagram](/images/flow-chart.png)
-
-
-
-
 
 ## Technology
 
@@ -197,6 +205,7 @@ With the application running in the simulator/emulator, you should be able to na
 
 <details>
   <summary>Click here to view!</summary>
+
   ![Home Page](/images/Home.JPG)
   ![Current Inventory](/images/curr_inv.JPG)
   ![Add Inventory](/images/add_inven.JPG)
