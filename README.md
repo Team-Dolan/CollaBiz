@@ -64,7 +64,7 @@ A Recipient, who is in need of food, supplies, resources, or other essentials, o
 
 ## Diagrams
 
-![Cooperation architecture diagram](/images/Screenshot 2020-05-24 at 3.53.32 AM.png)
+![Workflow diagram](/images/workflow.png)
 
 ![Flow-chart diagram](/images/flow-chart.png)
 
