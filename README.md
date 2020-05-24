@@ -4,7 +4,7 @@ This solution is based over the community cooperation model provided by technolo
 
 ## Team-Dolan
 
-- <b>Rohan Taneja</b> <b>TEAM LEADER</b>
+- Rohan Taneja (<b>Leader</b>)
 - Ujjawal Aggarwal
 - Aaryaman Saini
 
@@ -197,14 +197,14 @@ With the application running in the simulator/emulator, you should be able to na
 
 <details>
   <summary>Click here to view!</summary>
-<img align="left" width="320" height="530" src=/images/Home.JPG>
-<img align="right"  width="320" height="530" src=/images/curr_inv.JPG>
-<img align="left" width="320" height="530"  src=/images/add_inven.JPG>
-<img align="right" width="320" height="530" src=/images/update_inv.JPG>
-<img align="left" width="320" height="530"  src=/images/search_inv.JPG>
-<img align="right" width="320" height="530" src=/images/chat_watson.JPG>
-<img align="left"  width="320" height="530"  src=/images/enter_chat.JPG>
-<img align="right" width="320" height="530" src=/images/chat.JPG>
+  ![Home Page](/images/Home.JPG)
+  ![Current Inventory](/images/curr_inv.JPG)
+  ![Add Inventory](/images/add_inven.JPG)
+  ![Update Inventory](/images/update_inv.JPG)
+  ![Search Inventory](/images/search_inv.JPG)
+  ![Chat with Watson](/images/chat_watson.JPG)
+  ![User Chat Init](/images/enter_chat.JPG)
+  ![User Chat Interface](/images/chat.JPG)
 </details>
 
 ## Resources
@@ -213,6 +213,7 @@ With the application running in the simulator/emulator, you should be able to na
 - [Watson Assistant](https://cloud.ibm.com/docs/assistant?topic=assistant-getting-started)
 - [IBM Cloudant](https://cloud.ibm.com/docs/Cloudant?topic=cloudant-overview)
 - [HERE Location Services](https://developer.here.com/documentation)
+- [Firebase](https://firebase.google.com/docs)
 - [Node.js](https://nodejs.org)
 - [React Native](https://reactnative.dev/)
 - [IBM Blockchain for Developers](https://developer.ibm.com/technologies/blockchain/)
