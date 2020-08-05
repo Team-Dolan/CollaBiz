@@ -1,78 +1,26 @@
 # CollabBiz - an initiative to collaborate small businesses
 
-This solution is based over the community cooperation model provided by technologists from IBM.
+This application was devloped as a solution for Microsoft's HackOnAzure.
 
 ## Team-Dolan
 
-- Rohan Taneja (<b>Leader</b>)
+- ROHAN TANEJA (<b>Leader</b>)
 - Ujjawal Aggarwal
 - Aaryaman Saini
-
-## Original Authors
-<details>
-  <summary>Click here to view!</summary>
-- Henry Nash
-- Va Barbosa
-- Javier Torres
-- Omer Arad
-- JJ Asghar
-- Jody Burks
-- Robert Loredo
-- Debbie Kestin Schildkraut
-- Bruce Weed
-</details>
 
 ## Contents
 
 1. [Overview](#overview)
-2. [The idea](#the-idea)
-3. [How it works](#how-it-works)
-4. [Diagrams](#diagrams)
-5. [Technology](#technology)
-6. [Getting started](#getting-started)
-7. [Resources](#resources)
-8. [License](#license)
+2. [Diagrams](#diagrams)
+3. [Technologies](#technologies)
+4. [Getting started](#getting-started)
+5. [Deployment](#deployment)
+6. [Usages](#usages)
 
 ## Overview
 
-### What's the problem?
-
-We identified two problems and came up with a solution that can help both the entities. These problems were identified from our own personal experiences when it became hard for us to get certain items in stores. COVID-19 is a pandemic as declared by WHO. Initially, people took this lightly as the cases were only limited to China. Gradually, cases were being reported all over the world and people then started to panic. Governments, in all countries, started taking measures to prevent the spread of this disease. Some of the measures taken by the governments, as suggested by WHO, are Social Distancing. To implement this, Indian Government declared LOCKDOWN, so that social distancing can be ensured. This is a big step and it did indeed help to control the number of cases in India. Many people stayed at home for their own safety and only essential workers were allowed to work.
-While this, the Lockdown, has proved to be a good step, but with this came a new problem. There are many small businesses, which depend on their daily sales and in Lockdown, many people stopped buying stuff. So, they had to face huge backlashes. Also, there are many things that people need like important medicines and electronics, but these are not available in their local stores on which they count normally. The reason for unavailability of such items in some stores can be because of restrictions on delivery of goods to every store. So, we can see there are two problems here.
+We identified two problems and came up with a solution that can help both the entities. These problems were identified from our own personal experiences when it became hard for us to get certain items in stores. While the Lockdown, has proved to be a good step, but it came with some new problem. There are many small businesses, which depend on their daily sales and in Lockdown, many people stopped buying stuff. So, they had to face huge backlashes. Also, there are many things that people need, like important medicines and electronics, but these are not available in their local stores on which they counted on normally. The reason for unavailability of such items in some stores can be because of restrictions on delivery of goods to every store. So, we can see there are two problems here.
 So, the question was, how can we help small businesses to be able to keep selling products and how can people get those products for which they would normally depend on local stores? The answer is CollabBiz.
-
-### How can technology help?
-
-Mobile, web, and cloud services enable rapid deployment of applications that can empower cooperation in the community. [Watson Assistant](https://www.ibm.com/cloud/watson-assistant/) is a service on [IBM Cloud](https://cloud.ibm.com) that allows you to build, train, and deploy conversational interactions into any application, device, or channel.
-
-Creating a chatbot using Watson Assistant can help you address the issues that your users may face while trying to gather the necessary information. Embedding location/routing services (like [HERE](https://developer.here.com/products/routing)) can enhance such applications, giving optimum guidance so that they are outside of their isolation location for the minimum amount of time.
-
-## The idea
-
-The goal is make a web-application to bring such a collaboration at vast level. Using the given kit for starters we added more form and categories to bring suitable suppliers and recipients together. For starters, the collaboration functionality as provided we added a chat functionality on top to bring the collaborators together in the chatroom. A ticketing system for order generation and logistic handling has to be added to bring a sense of security for orders to be supplied.
-
-We aim to establish a networking model for business to function especially Pharmacies which tend to be most frequently visited for need of sanitization and hygiene products. This helps in modelling a market to get in touch with the supply chain as close and conviniently and restrict the movement of community to look in search of certain products.
-
-## Features
-
-- [x] Home Activity
-- [x] Inventory - Add, Edit, and Delete
-- [x] Location Services - HERE
-- [x] Watson Assistant - Training - Covid only updates
-- [x] Watson Assistant - Training - User support
-- [x] Chatroom service for Collaborators - Firebase - Group Chat
-- [ ] Complaint Form/ Report False Supply
-- [ ] Order and Logistics Ticketing
-- [ ] Sales Tracking and Review
-- [ ] Transaction History
-- [ ] Customer Record and many more 
-
-## How it works
-
-
-A Supplier (who may be a regular resident, a small business, a voluntary organization, etc.) that has food, supplies, resources, or other essentials they can provide opens the mobile application and fills out a brief form that indicates what they have. This information is then stored in a database in the IBM Cloud.
-
-A Recipient, who is in need of food, supplies, resources, or other essentials, opens the mobile application and can use the chat interface to locate supplies near them. For instance, they might type "Where can I find bread?" or "Can someone collect my shopping for me?" The mobile application then accesses the database (after first understanding the question via Watson Assistant) and then displays a map showing locally where they can find what they are looking for.
 
 ## Diagrams
 
@@ -80,29 +28,7 @@ A Recipient, who is in need of food, supplies, resources, or other essentials, o
 
 ![Flow-chart diagram](/images/flow-chart.png)
 
-## Technology
-
-### IBM Cloud Services
-<details>
-  <summary>Click here to view!</summary>
-
-- [Bot Asset Exchange](https://developer.ibm.com/code/exchanges/bots/)
-- [IBM Watson Assistant](https://www.ibm.com/cloud/watson-assistant/)
-- [How-to guides for chatbots](https://www.ibm.com/watson/how-to-build-a-chatbot)
-- [Learning path: Getting started with Watson Assistant](https://developer.ibm.com/series/learning-path-watson-assistant/)
-- [Build a Chatbot For Your Mobile App](https://developer.ibm.com/technologies/mobile/patterns/building-a-chatbot-with-kubernetes-watson-assistant-and-elastic-search)
-- [Build a cross-platform mobile app using React Native](https://developer.ibm.com/technologies/mobile/patterns/build-a-cross-platform-mobile-app-to-search-company-news-and-gain-insights)
-- [Building successful mobile apps article series](https://developer.ibm.com/series/building-successful-mobile-apps/)
-- [Node-RED Slack integration](https://www.ibm.com/cloud/blog/create-a-chatbot-on-ibm-cloud-and-integrate-with-slack-part-1)
-
-### HERE Technologies
-
-- [HERE.com API Key](https://developer.here.com/ref/IBM_starterkit_Covid?create=Freemium-Basic)
-- [HERE Maps](https://developer.here.com/products/maps)
-- [HERE Routing](https://developer.here.com/products/routing)
-- [Integrate interactive maps and location features into your application](https://developer.here.com/documentation/)
-
-</details>
+## Technologies
 
 ## Getting started
 <details>
@@ -216,18 +142,12 @@ With the application running in the simulator/emulator, you should be able to na
   ![User Chat Interface](/images/chat.JPG)
 </details>
 
-## Resources
+## Deployment
 
-- [IBM Cloud](https://www.ibm.com/cloud)
-- [Watson Assistant](https://cloud.ibm.com/docs/assistant?topic=assistant-getting-started)
-- [IBM Cloudant](https://cloud.ibm.com/docs/Cloudant?topic=cloudant-overview)
-- [HERE Location Services](https://developer.here.com/documentation)
-- [Firebase](https://firebase.google.com/docs)
-- [Node.js](https://nodejs.org)
-- [React Native](https://reactnative.dev/)
-- [IBM Blockchain for Developers](https://developer.ibm.com/technologies/blockchain/)
+A Supplier (who may be a regular resident, a small business, a voluntary organization, etc.) that has food, supplies, resources, or other essentials they can provide opens the mobile application and fills out a brief form that indicates what they have. This information is then stored in the database.
 
+A Recipient, who is in need of food, supplies, resources, or other essentials, opens the mobile application and can use the chat interface to locate supplies near them. For instance, they might type "Where can I find bread?" or "Can someone collect my shopping for me?" The mobile application then accesses the database (after first understanding the question) and then displays a map showing locally where they can find what they are looking for.
 
-## License
+## Usages
 
-This solution starter is made available under the [Apache 2 License](LICENSE).
+The goal was to make a web-application to get businesses to collaborate. We aimed to establish a networking model for business to function, especially Pharmacies, which tend to be most frequently visited for need of sanitization and hygiene products. This helps in modelling a market to get in touch with the supply chain as closely and conviniently, and restrict the movement of community to look in search of certain products. The application can come in handy even after lockdown.
